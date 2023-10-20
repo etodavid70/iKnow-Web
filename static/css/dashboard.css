@@ -1,0 +1,40 @@
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px;
+  }
+  
+  .logo {
+  text-align: center;
+  flex-grow: 1;
+  color:  rgb(108, 186, 106);
+  font-size: 200%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .login {
+  padding-right: 20px;
+  }
+
+
+fieldset{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: rgb(108, 186, 106);
+    }
+
+    body{
+
+      background-color: whitesmoke;
+    }

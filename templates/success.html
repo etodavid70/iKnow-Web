@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Successful {% endblock%}
+{% block navigator %}
+   <a href="{% url 'index' %}">Home</a> |
+  <a href="{% url 'dashboard' %}">Dashboard</a> |
+  <a href="{% url 'postnews' %}">Post a Content</a>
+{% endblock %}
+
+{% block insert %}
+
+  <p> Successfully Posted</p>
+
+{% endblock %}
+
