@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  }
+  
+  .logo {
+  text-align: center;
+  flex-grow: 1;
+  color:  rgb(124, 101, 253); 
+  font-size: 200%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .login {
+  padding-right: 20px;
+  }
+  a{
+  text-decoration: none;
+  color: rgb(124, 101, 253); 
+  }
+
+body{
+  background-color: white;
+  margin-top: 5px;
+  
+  
+}
+
+textarea{
+  background-color: white;
+  border-color: rgb(124, 101, 253); ;
+}
+textarea:focus{
+  border: 2px solid rgb(124, 101, 253);   
+  outline: none;
+}
+
+input[type="text"]{
+
+padding: 10px;
+border: 1px solid rgb(124, 101, 253); 
+border-radius: 3px;
+background-color: white;
+}
+
+input[type="text"]:focus{
+  border: 2px solid rgb(124, 101, 253);   
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: rgb(124, 101, 253); 
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  }
+
+.post-field{
+display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  align-items: center;     
+  height: 100vh;           
+  margin: 0;
+  padding: 10px;
+}
+
+
+.post-button{
+  justify-content: center;
+
+}
+
+p{
+  color:rgb(124, 101, 253); 
+}

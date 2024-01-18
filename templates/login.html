@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Login {% endblock%}
+{% block navigator %}
+   <a href="{% url 'index' %}">Home</a> |
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endblock %}
+
+{% block insert %}
+
+
+
+  <form class="login-form" action="{% url 'login' %}" method="post">
+    <fieldset>
+{% csrf_token %}
+
+  <input type="username", name="username", placeholder="username" required><br>
+<!-- add an email field to this form -->
+<input type="password" name="password" placeholder="password" required><br><br>
+
+
+<input type="submit" value="LOGIN">
+</fieldset> <br><br>
+
+<div class="admin-login">
+  <a href="/superuser">Admin</a>
+</div>
+
+</form>
+
+
+
+<style>
+.login-form{
+  width: 300px;
+}
+
+input[type="submit"] {
+  background-color: rgb(124, 101, 253);   
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+}
+
+fieldset{
+  padding: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 1px solid rgb(124, 101, 253);   
+
+}
+
+.admin-login{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+}
+
+</style>
+
+
+
+{% endblock %}
+
+

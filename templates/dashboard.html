@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{%  static 'css/dashboard.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'icon.ico' %}">
+  <title>Dashboard</title>
+</head>
+<body>
+  <header>
+    <div class="logo">iKnow</div>
+    <div class="login">
+      <a href="{% url 'index' %}">Home </a>|
+      <a href="{% url 'logout' %}">Logout </a>
+     
+      <!-- <a href="/superuser">Admin </a>     -->
+    </div>
+</header>
+
+<fieldset class="dashboard">
+<p class="username">Hello! {{request.user}}</p> 
+  <div>
+    <img src="{% static 'img/person.png' %}" alt="image">
+  </div> <br><br>
+  
+  <div class="post-content">
+    <a class="post-content" href="{% url 'postnews' %}">Post a Content</a> 
+  </div>
+</fieldset>
+
+
+
+
+
+</body>
+</html>

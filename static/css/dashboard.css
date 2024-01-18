@@ -1,0 +1,52 @@
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  }
+  
+  .logo {
+  text-align: center;
+  flex-grow: 1;
+  color:  rgb(124, 101, 253); 
+  font-size: 200%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .login {
+  padding-right: 20px;
+  }
+  a{
+  text-decoration: none;
+  color: rgb(124, 101, 253); 
+  }
+
+  
+
+fieldset{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  }
+
+
+body {
+    background-color: white;
+    
+  } 
+  
+ 
+  
+.post-content{
+
+  text-decoration: none;
+  background-color: rgb(124, 101, 253); 
+  color: white;
+ padding: 10px 20px;
+
+}

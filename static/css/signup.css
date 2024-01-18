@@ -1,0 +1,86 @@
+/* body{
+
+  background-color: white;
+} */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: transparent;
+padding: 10px;
+}
+
+.logo {
+text-align: center;
+flex-grow: 1;
+color:  rgb(124, 101, 253); 
+font-size: 200%;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.login {
+padding-right: 20px;
+}
+a{
+text-decoration: none;
+color: rgb(124, 101, 253); 
+}
+input[type='text'],  input[type='password']{
+
+width: 80%;
+padding: 10px;
+border: 1px solid rgb(124, 101, 253); 
+border-radius: 3px;
+background-color: white;
+}
+
+input[type='text'],input[type='password']:focus{
+  border: 2px solid rgb(124, 101, 253);   
+  outline: none;
+}
+
+input[type="submit"] {
+background-color: rgb(124, 101, 253); 
+color: white;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+width: 100px;
+}
+
+form{
+width: 300px;
+margin: 0 auto;
+}
+
+fieldset{
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border: 1px solid rgb(124, 101, 253); 
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/background4.jpg');
+  background-size: cover; /* or 'contain' based on your preference */
+  background-position: center;
+  z-index: -1; /* Ensures the background is behind other elements */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Place the content above the background */
+  padding: 20px; /* Add padding as needed */
+
+  /* Optional: Customize the appearance of your scrollable list */
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+  /* overflow-y: auto; Enable vertical scrolling if needed */
+  max-height: 80vh; /* Set a maximum height for the content */
+}

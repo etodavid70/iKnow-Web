@@ -1,0 +1,126 @@
+
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; 
+}
+
+.content-box {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+form{
+  width: 500px;
+  margin: 0 auto;
+}
+
+
+
+input[type='username'],  input[type='password']{
+
+  width: 80%;
+  padding: 10px;
+  border: 1px solid rgb(124, 101, 253); 
+  border-radius: 3px;
+  background-color: white;
+  }
+  
+  input[type='username']:focus,input[type='password']:focus{
+    border: 2px solid rgb(124, 101, 253);   
+    outline: none;
+  }
+  
+
+input[type="submit"] {
+  background-color: rgb(124, 101, 253);   
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 80px;
+  height: 50px;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+body {
+  background-color: white;
+  
+} 
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px;
+  }
+  
+  .logo {
+  text-align: center;
+  flex-grow: 1;
+  color:  rgb(124, 101, 253); 
+  font-size: 200%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .login {
+  padding-right: 20px;
+  }
+  a{
+  text-decoration: none;
+  color: rgb(124, 101, 253); 
+  }
+
+
+
+.postform{
+  border-color:  rgb(124, 101, 253);   ;
+} 
+
+
+/* for login admin */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/background4.jpg');
+  background-size: cover; /* or 'contain' based on your preference */
+  background-position: center;
+  z-index: -1; /* Ensures the background is behind other elements */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Place the content above the background */
+  padding: 20px; /* Add padding as needed */
+
+  /* Optional: Customize the appearance of your scrollable list */
+  max-width: 600px; /* Set a maximum width for the content */
+  margin: 0 auto; /* Center the content horizontally */
+  /* overflow-y: auto; Enable vertical scrolling if needed */
+  max-height: 80vh; /* Set a maximum height for the content */
+}
+
+
+
+

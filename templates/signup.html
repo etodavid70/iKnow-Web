@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link rel="icon" type="image/x-icon" href="{% static 'icon.ico' %}">
+</head>
+<body>
+  <header>
+    <div class="logo">iKnow</div>
+    <div class="login">
+      <a href="{% url 'index' %}">Home</a> |
+      <a href="{% url 'login' %}">Login</a>
+       
+    </div>
+</header>
+<div class="background">
+  <!-- Your fixed-size background image goes here -->
+</div>
+
+<div class="content">
+  <form method="post">
+    
+    {%  csrf_token %}
+    {{ form.as_p }}
+    <input class="sign-up-button" type="submit" value="SIGNUP">
+    
+      </form>
+    </div>
+      
+      <style>
+  input[type="submit"] {
+  background-color:rgb(124, 101, 253); 
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+}
+
+      </style>
+    
+  
+</body>
+
+</html> 
+  

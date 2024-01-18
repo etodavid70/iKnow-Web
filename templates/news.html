@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'icon.ico' %}">
+    <title>iKnow</title>
+</head>
+<body>
+    <header>
+        <div class="logo">iKnow</div>
+        <div class="login">
+        {% if not request.user.is_authenticated %}
+                <a href="{% url 'signup' %}">Sign Up</a> |
+                <a href="{% url 'login' %}">Login</a>
+        {% else %}   
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+
+        {% endif %}
+        </div>
+    </header>
+
+
+  <div class="background">
+        <!-- Your fixed-size background image goes here -->
+      </div>
+
+<div class="content">
+    <div class="card-container">
+        {% for item in all|dictsortreversed:"timeline" %}
+
+        {% if item.validate %}
+        <div class="content-box">
+            <p class="article-title">{{item.heading}}</p>
+
+      <details class="myDetails">
+              <summary class="mySummary">details</summary>
+              
+              <p>{{item.paragraph1}}  </p>
+              <p>{{item.paragraph2}} </p>
+              <p>{{item.paragraph3}}</p>
+              
+            
+            </details>
+            <script>
+              const summaryElement = document.querySelector('#myDetails summary');
+  summaryElement.addEventListener('click', function() {
+    summaryElement.style.display = 'none';
+  });
+
+              </script>
+              <p class="date">{{item.timeline}}| posted by: {{item.author}} </p>
+          </div>  
+          
+          <style>
+            /* CSS rules for styling the date */
+            .date {
+                color: rgb(87, 78, 78);
+
+                font-size: 16px;
+            }
+        </style>
+
+        <form action="{% url 'star-post' %}" method="POST" class="ui form">
+            {% csrf_token %}
+
+        <input type="hidden" name="news_id" value="{{item.id }}">
+
+        <div>
+        {% if request.user.is_authenticated %}
+        
+            {% if user not in item.star.all  %}
+            <button float="left" class="star" type="submit" style="
+            background-color: gold; color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            ">Star</button>
+            {%  else %}
+            <button class="unstar" type="submit"  style="
+             background-color: rgb(255, 163, 163); 
+             border: none;
+             color: white;
+            border-radius: 2px;
+            cursor: pointer;
+             ">Unstar</button>
+
+            {% endif %}
+        
+ {% endif %}
+
+
+ 
+    <button float="left" disabled style=" 
+                background-color: rgb(124, 101, 253); 
+                border: none;
+                color: white;
+               border-radius: 2px;
+               cursor: pointer;
+               justify-content: center;
+               text-align: center;
+                ">{{item.star.all.count}} {% if item.star.all.count > 1  %} Stars {% else %} Star {% endif %}</button><br><br>
+   </div>
+</form>
+
+
+
+
+
+<style>
+    .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+<!-- <p style="text-align: center;">{{item.star.all.count}} {% if item.star.all.count > 1  %} 
+    Stars {% else %} Star {% endif %}</p><br><br> -->
+
+        
+        {% endif %}
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
